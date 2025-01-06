@@ -39,7 +39,6 @@ router.get('/users', async (req, res) => {
         res.status(500).send({ message: 'Error fetching users', err: err.message });
     }
 })
-
 //  /users/:id (read)
 router.get('/users/:id', async (req, res) => {
     const id = req.params.id;
@@ -53,6 +52,7 @@ router.get('/users/:id', async (req, res) => {
         res.status(500).send({ message: 'Error fetching user', err: err.message });
     }
 });
+
 // /users/:id (update)
 router.patch('/users/:id', async (req, res) => {
     const id = req.params.id;
@@ -70,6 +70,7 @@ router.patch('/users/:id', async (req, res) => {
         res.status(500).send({ message: 'Error updating user', err: err.message });
     }
 });
+
 // /users/:id (delete)
 router.delete('/users/:id', async (req, res) => {
     const id = req.params.id;
